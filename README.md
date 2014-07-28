@@ -1,2 +1,2 @@
-microzed-documentation
+zedboard-documentation
 ======================
