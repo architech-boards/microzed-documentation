@@ -1,0 +1,2 @@
+uenv_boot=fatload mmc 0:1 0x3000000 uImage; fatload mmc 0:1 0x2ff0000 devicetree.dtb; bootm 0x3000000 - 0x2fF0000
+
