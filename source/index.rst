@@ -2,9 +2,9 @@
 Architech's Microzed documentation
 **********************************
 
-:Version: 1.1.0A
+:Version: 1.1.0B
 :Copyright: Architech
-:Date: 28/08/14
+:Date: 09/09/14
 
 .. image:: _static/board.png
     :align: center
