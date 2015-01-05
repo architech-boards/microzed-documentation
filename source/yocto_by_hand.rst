@@ -51,7 +51,7 @@ The following steps are necessary for a clean installation:
 
  <div>
  <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'yocto_by_hand_rst-host-74' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="yocto_by_hand_rst-host-74" class="language-markup">repo init -u https://github.com/architech-boards/zedboard-manifest.git -b dora -m manifest.xml</code></pre>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="yocto_by_hand_rst-host-74" class="language-markup">repo init -u https://github.com/architech-boards/zedboard-manifest.git -b dizzy -m manifest.xml</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -88,13 +88,13 @@ When you want your local repositories to be updated, just:
  <script src="_static/select_text.js"></script>
  </div>
 
-If you really want to download everything by hand, just clone branch *dora* of *meta-xilinx*:
+If you really want to download everything by hand, just clone branch *dizzy* of *meta-xilinx*:
 
 .. raw:: html
 
  <div>
  <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'yocto_by_hand_rst-host-77' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="yocto_by_hand_rst-host-77" class="language-markup">git clone -b dora git://git.yoctoproject.org/meta-xilinx.git</code></pre>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="yocto_by_hand_rst-host-77" class="language-markup">git clone -b dizzy git://git.yoctoproject.org/meta-xilinx.git</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
