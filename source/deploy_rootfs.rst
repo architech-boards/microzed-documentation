@@ -14,8 +14,8 @@ Run this command:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'deploy_rootfs_rst-host-51' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="deploy_rootfs_rst-host-51" class="language-markup">mkdir -p /home/architech/Documents/zedboard</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'deploy_rootfs_rst-host-111' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="deploy_rootfs_rst-host-111" class="language-markup">mkdir -p /home/architech/Documents/microzed</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -36,8 +36,8 @@ under:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'deploy_rootfs_rst-host-52' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="deploy_rootfs_rst-host-52" class="language-markup">/media/boot</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'deploy_rootfs_rst-host-112' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="deploy_rootfs_rst-host-112" class="language-markup">/media/boot</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -47,8 +47,8 @@ while the second partition gets mounted under:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'deploy_rootfs_rst-host-53' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="deploy_rootfs_rst-host-53" class="language-markup">/media/rootfs</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'deploy_rootfs_rst-host-113' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="deploy_rootfs_rst-host-113" class="language-markup">/media/rootfs</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -63,11 +63,11 @@ Ok then, we can finally deploy bootloader and kernel on the first partition of t
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'deploy_rootfs_rst-host-54' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="deploy_rootfs_rst-host-54" class="language-markup">cp /home/architech/Documents/zedboard/BOOT.BIN /media/boot/
- cp /home/architech/Documents/zedboard/uEnv.txt /media/boot/
- cp /home/architech/Documents/zedboard/devicetree.dtb /media/boot/
- cp /home/architech/architech_sdk/architech/zedboard/yocto/build/tmp/deploy/images/zedboard-zynq7/uImage /media/boot/</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'deploy_rootfs_rst-host-114' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="deploy_rootfs_rst-host-114" class="language-markup">cp /home/architech/Documents/microzed/BOOT.BIN /media/boot/
+ cp /home/architech/Documents/microzed/uEnv.txt /media/boot/
+ cp /home/architech/Documents/microzed/devicetree.dtb /media/boot/
+ cp /home/architech/architech_sdk/architech/microzed/yocto/build/tmp/deploy/images/microzed/uImage /media/boot/</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -77,9 +77,9 @@ and the root file system on the second partition of the SD card:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'deploy_rootfs_rst-host-55' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="deploy_rootfs_rst-host-55" class="language-markup">sudo rm -rf /media/rootfs/*
- sudo tar -xzf /home/architech/architech_sdk/architech/zedboard/yocto/build/tmp/deploy/images/zedboard-zynq7/core-image-minimal-dev-zedboard-zynq7.tar.gz -C /media/rootfs/</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'deploy_rootfs_rst-host-115' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="deploy_rootfs_rst-host-115" class="language-markup">sudo rm -rf /media/rootfs/*
+ sudo tar -xzf /home/architech/architech_sdk/architech/microzed/yocto/build/tmp/deploy/images/microzed/core-image-minimal-dev-microzed.tar.gz -C /media/rootfs/</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -93,8 +93,8 @@ Make sure everything has been written on the SD card:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'deploy_rootfs_rst-host-56' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="deploy_rootfs_rst-host-56" class="language-markup">sync</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'deploy_rootfs_rst-host-116' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="deploy_rootfs_rst-host-116" class="language-markup">sync</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>

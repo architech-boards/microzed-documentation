@@ -7,8 +7,8 @@ end of the build process, *Bitbake* will let you find it under directory:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'rootfs_rst-host-141' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="rootfs_rst-host-141" class="language-markup">/path/to/yocto/build/tmp/deploy/images/zedboard-zynq7/</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'rootfs_rst-host-21' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="rootfs_rst-host-21" class="language-markup">/path/to/yocto/build/tmp/deploy/images/microzed/</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -18,8 +18,8 @@ this means that within the SDK the actual path of the directory is:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'rootfs_rst-host-142' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="rootfs_rst-host-142" class="language-markup">/home/architech/architech_sdk/architech/zedboard/yocto/build/tmp/deploy/images/zedboard-zynq7/</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'rootfs_rst-host-22' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="rootfs_rst-host-22" class="language-markup">/home/architech/architech_sdk/architech/microzed/yocto/build/tmp/deploy/images/microzed/</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -49,8 +49,8 @@ under:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'rootfs_rst-host-143' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="rootfs_rst-host-143" class="language-markup">/media/rootfs</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'rootfs_rst-host-23' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="rootfs_rst-host-23" class="language-markup">/media/rootfs</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -65,16 +65,16 @@ Untar the file corresponding to your root file system inside such a partition:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'rootfs_rst-host-144' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="rootfs_rst-host-144" class="language-markup">sudo rm -rf /media/rootfs/*
- sudo tar -xzf /home/architech/architech_sdk/architech/zedboard/yocto/build/tmp/deploy/images/zedboard-zynq7/&lt;image&gt;-zedboard-zynq7.tar.gz -C /media/rootfs/</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'rootfs_rst-host-24' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="rootfs_rst-host-24" class="language-markup">sudo rm -rf /media/rootfs/*
+ sudo tar -xzf /home/architech/architech_sdk/architech/microzed/yocto/build/tmp/deploy/images/microzed/&lt;image&gt;-microzed.tar.gz -C /media/rootfs/</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
 
 where *<image>* is the name of the recipe you used to build your root file system.
 For example, if you built core-image-minimal-dev with :ref:`Bitbake <bitbake_label>`,
-then the name of the tarball will be *core-image-minimal-dev-zedboard-zynq7.tar.gz*
+then the name of the tarball will be *core-image-minimal-dev-microzed.tar.gz*
 
 .. important::
 

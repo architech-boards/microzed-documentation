@@ -18,8 +18,8 @@ you need to download and run a system wide installation script:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'install_scripts_rst-host-81' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="install_scripts_rst-host-81" class="language-markup">git clone -b dizzy https://github.com/architech-boards/machine_installer.git
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'install_scripts_rst-host-101' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="install_scripts_rst-host-101" class="language-markup">git clone -b dizzy https://github.com/architech-boards/machine_installer.git
  cd machine_installer
  ./machine_install -g -p</code></pre>
  <script src="_static/prism.js"></script>
@@ -39,14 +39,14 @@ Install just one board
 ----------------------
 
 If you don't want to install the tools for all the boards, you can install just the subset
-of tools related to ZedBoard:
+of tools related to Microzed:
 
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'install_scripts_rst-host-82' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="install_scripts_rst-host-82" class="language-markup">git clone -b dizzy https://github.com/architech-boards/zedboard-splashscreen.git
- cd zedboard-splashscreen
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'install_scripts_rst-host-102' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="install_scripts_rst-host-102" class="language-markup">git clone -b dizzy https://github.com/architech-boards/microzed-splashscreen.git
+ cd microzed-splashscreen
  ./run_install</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>

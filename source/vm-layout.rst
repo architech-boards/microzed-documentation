@@ -19,8 +19,8 @@ its sub-directories main layout is the following:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'vm_layout_rst-host-101' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="vm_layout_rst-host-101" class="language-markup">architech_sdk
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'vm_layout_rst-host-81' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="vm_layout_rst-host-81" class="language-markup">architech_sdk
      |
      |_ splashscreen
      |
@@ -32,7 +32,7 @@ its sub-directories main layout is the following:
          |
          |_ ...
          |
-         |_ zedboard
+         |_ microzed
              |
              |_ eclipse
              |
@@ -65,7 +65,7 @@ its sub-directories main layout is the following:
  <script src="_static/select_text.js"></script>
  </div>
 
-**zedboard** directory contains all the tools composing the ArchiTech SDK for ZedBoard board,
+**microzed** directory contains all the tools composing the ArchiTech SDK for Microzed board,
 along with all the information needed by the splash screen application. In particular:
 
 * *eclipse* directory is where Eclipse IDE has been installed
@@ -75,7 +75,7 @@ along with all the information needed by the splash screen application. In parti
 * *sysroot* is supposed to contain the file system you want to compile against,
 * *toolchain* is where the cross-toolchain has been installed installed
 * *workspace* contains the the workspaces for Eclipse and Qt Creator IDEs
-* *yocto* is where you find all the meta-layers ZedBoard requires, along with Poky and the build directory
+* *yocto* is where you find all the meta-layers Microzed requires, along with Poky and the build directory
 
 Splash screen
 -------------
@@ -87,14 +87,14 @@ It can be opened by clicking on its *Desktop* icon.
     :align: center   
 
 Once started, you can can choose if you want to work with Architech's boards or with partners'
-ones. For ZedBoard, choose **ArchiTech**.
+ones. For Microzed, choose **ArchiTech**.
 
 .. image:: _static/splashscreen-architech.png
     :align: center
 
-A list of all available Architech's boards will open, select ZedBoard.
+A list of all available Architech's boards will open, select Microzed.
 
-A list of actions related to ZedBoard that can be activated will appear.
+A list of actions related to Microzed that can be activated will appear.
 
 .. image:: _static/splashscreen-board-menu.jpg
     :align: center

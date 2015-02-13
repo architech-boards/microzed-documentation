@@ -1,7 +1,7 @@
 SDK
 ===
 
-The SDK provided by *Architech* to support ZedBoard is composed by several components, the most important of which are:
+The SDK provided by *Architech* to support Microzed is composed by several components, the most important of which are:
 
 * **Yocto**,
 

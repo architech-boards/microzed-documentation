@@ -10,7 +10,7 @@ which you can download from this page:
  Compute the MD5SUM value of the zip file you downloaded and compare it to the golden one you find in the download page.
 
 Uncompress the file, and you will get a *.vdi* file that is our virtual disk image.
-The environment contains the SDK for all the boards provided by Architech, ZedBoard included.
+The environment contains the SDK for all the boards provided by Architech, Microzed included.
 
 Download VirtualBox
 -------------------
@@ -169,3 +169,31 @@ You need to choose a directory on your host operating system to share with the g
 
 Once the virtual machine has been booted, the shared folder will be mounted under */media/* directory inside the virtual machine.
 
+
+Install VBox Additions
+----------------------
+
+The VBox addictions add functionalities to the virtual machine such as better graphic driver and more. It is already installed in the SDK but is important re-install it to configuring correctly the virtual machine with your operating system.
+
+1. Starts the virtual machine
+
+.. image:: _static/vbStart.png
+    :align: center
+    
+2. Click on the virtual box menu to the voice *Devices* and select *Insert Guest Additions CD Images...*. 
+A message box will appear at the start of the installation, click on *run* button
+
+.. image:: _static/messagebox_vboxadditions.jpg
+    :align: center
+    
+4. To proceed are required admin privileges, so insert the password *architech* when asked
+
+.. image:: _static/messagebox_sudo.jpg
+    :align: center
+
+5. Then a terminal will show the installation progress. When finished, press *Enter* key
+
+.. image:: _static/terminal_vboxadditions.jpg
+    :align: center
+    
+6. Before to use the SDK, it is required reboot the virtual machine

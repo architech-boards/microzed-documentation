@@ -9,8 +9,8 @@ Get them from *Bitbake* build directory (if you built the kernel with it) or get
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'kernel_rst-host-21' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="kernel_rst-host-21" class="language-markup">/path/to/build/tmp/work/zedboard_zynq7-poky-linux-gnueabi/linux-xlnx/3.8-xilinx+gitf4ff79d44a966ebea6229213816d17eb472b303e-r1/git</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'kernel_rst-host-171' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="kernel_rst-host-171" class="language-markup">/path/to/build/tmp/work/microzed-poky-linux-gnueabi/linux-xlnx/3.8-xilinx+gitf4ff79d44a966ebea6229213816d17eb472b303e-r1/git</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -21,8 +21,8 @@ If you are working with the virtual machine, you will find them under directory:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'kernel_rst-host-22' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="kernel_rst-host-22" class="language-markup">/home/architech/architech_sdk/architech/zedboard/yocto/build/tmp/work/zedboard_zynq7-poky-linux-gnueabi/linux-xlnx/3.8-xilinx+gitf4ff79d44a966ebea6229213816d17eb472b303e-r1/git</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'kernel_rst-host-172' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="kernel_rst-host-172" class="language-markup">/home/architech/architech_sdk/architech/microzed/yocto/build/tmp/work/microzed-poky-linux-gnueabi/linux-xlnx/3.8-xilinx+gitf4ff79d44a966ebea6229213816d17eb472b303e-r1/git</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -37,11 +37,12 @@ always get them from the Internet by cloning the proper repository and checking 
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'kernel_rst-host-23' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="kernel_rst-host-23" class="language-markup">cd ~/Documents
- git clone git://github.com/Xilinx/linux-xlnx
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'kernel_rst-host-173' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="kernel_rst-host-173" class="language-markup">cd ~/Documents
+ git clone -b xlnx_3.8 git://github.com/Xilinx/linux-xlnx
  cd linux-xlnx
- git checkout f4ff79d44a966ebea6229213816d17eb472b303e</code></pre>
+ git checkout f4ff79d44a966ebea6229213816d17eb472b303e
+ git checkout xlnx_3.8</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -51,14 +52,39 @@ and by properly patching the sources:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'kernel_rst-host-24' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="kernel_rst-host-24" class="language-markup">cd ~/Documents
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'kernel_rst-host-174' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="kernel_rst-host-174" class="language-markup">cd ..
+ patch -p1 -d linux-xlnx/ &lt; ~/architech_sdk/architech/microzed/yocto/meta-xilinx/recipes-kernel/linux/linux-xlnx/libtraceevent-Remove-hard-coded-include-to-usr-local.patch</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
+
+
+If you don't use our SDK then use the following commands to patch the sources:
+
+.. raw:: html
+
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'kernel_rst-host-175' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="kernel_rst-host-175" class="language-markup">cd ~/Documents
  git clone git://git.yoctoproject.org/meta-xilinx.git
  cd meta-xilinx/
  git checkout cb7329a596a5ab2d1392c1962f9975eeef8e4576
  cd ..
- patch -p1 -d linux-xlnx/ &lt; meta-xilix/recipes-kernel/linux/linux-xlnx/libtraceevent-Remove-hard-coded-include-to-usr-local.patch
- cp /home/architech/architech_sdk/architech/zedboard/yocto/meta-xilinx/conf/machine/boards/common/zynq_defconfig_3.8.cfg ~/linux-xlnx/.config</code></pre>
+ patch -p1 -d linux-xlnx/ &lt; meta-xilinx/recipes-kernel/linux/linux-xlnx/libtraceevent-Remove-hard-coded-include-to-usr-local.patch</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
+
+Download the config file and put it in the linux directory, renamed *.config*:
+
+	`Download file config <_static/config>`_
+
+.. raw:: html
+
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'kernel_rst-host-176' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="kernel_rst-host-176" class="language-markup">cp ~/Downloads/config ~/Documents/linux-xlnx/.config</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -69,8 +95,9 @@ Section) and you are ready to customize the kernel:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'kernel_rst-host-25' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="kernel_rst-host-25" class="language-markup">cd ~/Documents/linux-xlnx
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'kernel_rst-host-177' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="kernel_rst-host-177" class="language-markup">source /home/architech/architech_sdk/architech/microzed/toolchain/environment-nofs
+ cd ~/Documents/linux-xlnx
  make menuconfig</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
@@ -78,14 +105,32 @@ Section) and you are ready to customize the kernel:
 
 and to compile it:
 
+.. raw:: html
+
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'kernel_rst-host-178' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="kernel_rst-host-178" class="language-markup">make microzed_defconfig
+ make -j &lt;2 * number of processor's cores&gt;</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
+
+By the end of the build process you will get **zImage** under *arch/arm/boot*.
+
 .. host::
 
- make -j <2 * number of processor's cores> uImage
+ ~/Documents/linux-xlnx/arch/arm/boot/zImage
+ 
+Now you need compile the devicetree file:
 
-By the end of the build process you will get **uImage** under *arch/arm/boot*.
+.. raw:: html
 
-.. host::
-
- ~/Documents/linux-xlnx/arch/arm/boot/uImage
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'kernel_rst-host-179' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="kernel_rst-host-179" class="language-markup">cp /home/architech/architech_sdk/architech/microzed/yocto/meta-microzed/recipes-kernel/linux/linux-xlnx-3.8/*.dts* arch/arm/boot/dts/
+ make microzed-mmcblk0p2.dtb</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
 
 Enjoy!

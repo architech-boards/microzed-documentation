@@ -7,8 +7,8 @@ There are two common ways to get that:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'manual_compilation_rst-host-111' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="manual_compilation_rst-host-111" class="language-markup">bitbake meta-toolchain</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'manual_compilation_rst-host-61' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="manual_compilation_rst-host-61" class="language-markup">bitbake meta-toolchain</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -18,8 +18,8 @@ or
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'manual_compilation_rst-host-112' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="manual_compilation_rst-host-112" class="language-markup">bitbake &lt;image recipe name&gt; -c populate_sdk</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'manual_compilation_rst-host-62' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="manual_compilation_rst-host-62" class="language-markup">bitbake &lt;image recipe name&gt; -c populate_sdk</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -36,8 +36,8 @@ To use it just do:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'manual_compilation_rst-host-113' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="manual_compilation_rst-host-113" class="language-markup">source /home/architech/architech_sdk/architech/zedboard/toolchain/environment</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'manual_compilation_rst-host-63' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="manual_compilation_rst-host-63" class="language-markup">source /home/architech/architech_sdk/architech/microzed/toolchain/environment</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -47,8 +47,8 @@ to compile Linux user-space stuff. If you want to compile kernel or bootloader t
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'manual_compilation_rst-host-114' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="manual_compilation_rst-host-114" class="language-markup">source /home/architech/architech_sdk/architech/zedboard/toolchain/environment-nofs</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'manual_compilation_rst-host-64' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="manual_compilation_rst-host-64" class="language-markup">source /home/architech/architech_sdk/architech/microzed/toolchain/environment-nofs</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>

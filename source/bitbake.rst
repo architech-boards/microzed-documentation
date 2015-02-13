@@ -25,8 +25,8 @@ Luckily, there is a script that takes care of it, all you need to do is:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-181' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-181" class="language-markup">source /path/to/oe-init-build-env /path/to/build/directory</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-11' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-11" class="language-markup">source /path/to/oe-init-build-env /path/to/build/directory</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -36,8 +36,8 @@ Inside the virtual machine, you can find *oe-init-build-env* script inside:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-182' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-182" class="language-markup">/home/architech/architech_sdk/architech/zedboard/yocto/poky</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-12' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-12" class="language-markup">/home/architech/architech_sdk/architech/microzed/yocto/poky</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -50,8 +50,8 @@ By default, with the SDK, the script is used like this:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-183' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-183" class="language-markup">source /home/architech/architech_sdk/architech/zedboard/yocto/poky/oe-init-build-env</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-13' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-13" class="language-markup">source /home/architech/architech_sdk/architech/microzed/yocto/poky/oe-init-build-env</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -66,19 +66,23 @@ and will change your current working directory to that specific directory.
 
  The build directory contains all the caches, builds output, temporary files, log files, file system images... everything!
 
-The default build directory for ZedBoard is located under:
+The default build directory for Microzed is located under:
 
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-184' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-184" class="language-markup">/home/architech/architech_sdk/architech/zedboard/yocto/build</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-14' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-14" class="language-markup">/home/architech/architech_sdk/architech/microzed/yocto/build</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
 
-and the splash screen has a facility (a button located under ZedBoard's page) that can take you
+and the splash screen has a facility (a button located under Microzed's page) that can take you
 there with the right environment already in place so you are productive right away.
+
+.. important::
+
+ | If you don't use the default build directory you need setup the local.conf file. See the paragraph below.
 
 Configuration files
 -------------------
@@ -89,14 +93,14 @@ directory inside your build directory, we are talking about **local.conf** and *
 
 *local.conf* contains your customizations for the build process, the most important variables you
 should be interested about are: **MACHINE**, **DISTRO**, **BB_NUMBER_THREADS** and **PARALLEL_MAKE**.
-*MACHINE* defines the target machine you want compile against. The proper value for ZedBoard is 
-zedboard-zynq7:
+*MACHINE* defines the target machine you want compile against. The proper value for Microzed is 
+microzed:
 
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-185' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-185" class="language-markup">MACHINE ??= "zedboard-zynq7"</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-15' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-15" class="language-markup">MACHINE ??= "microzed"</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -107,8 +111,8 @@ default distribution to use with the board is:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-186' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-186" class="language-markup">DISTRO ?= "poky"</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-16' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-16" class="language-markup">DISTRO ?= "poky"</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -123,8 +127,8 @@ machine has/sees four cores, then you should set those variables like this:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-187' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-187" class="language-markup">BB_NUMBER_THREADS ?= "8"
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-17' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-17" class="language-markup">BB_NUMBER_THREADS ?= "8"
  PARALLEL_MAKE ?= "-j 8"</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
@@ -147,8 +151,8 @@ The first suggestion is to run:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-188' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-188" class="language-markup">bitbake -h</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-18' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-18" class="language-markup">bitbake -h</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -159,8 +163,8 @@ During normal activity you will need to simply run a command like:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-189' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-189" class="language-markup">bitbake &lt;recipe name&gt;</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-19' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-19" class="language-markup">bitbake &lt;recipe name&gt;</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -170,25 +174,25 @@ for example:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-1810' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-1810" class="language-markup">bitbake core-image-minimal-dev</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-110' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-110" class="language-markup">bitbake core-image-minimal-dev</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
 
-Such a comman will build bootloader, Linux kernel and a root file system.
+Such a command will build bootloader, Linux kernel and a root file system.
 *core-image-minimal-dev* tells Bitbake to execute whatever recipe
 
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-1811' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-1811" class="language-markup">/home/architech/architech_sdk/architech/zedboard/yocto/poky/meta/recipes-extended/images/core-image-minimal-dev.bb</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-111' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-111" class="language-markup">/home/architech/architech_sdk/architech/microzed/yocto/poky/meta/recipes-extended/images/core-image-minimal-dev.bb</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
 
-tells it to do, so, you just place the name of the recipe without the extension.
+you just place the name of the recipe without the extension *.bb*.
 
 Of course, there are times when you want more control over Bitbake, for example, you want to execute just one task
 like recompiling the Linux kernel, no matter what. That action can be achieved with:
@@ -196,8 +200,8 @@ like recompiling the Linux kernel, no matter what. That action can be achieved w
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-1812' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-1812" class="language-markup">bitbake -c compile -f virtual/kernel</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bitbake_rst-host-112' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bitbake_rst-host-112" class="language-markup">bitbake -c compile -f virtual/kernel</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>

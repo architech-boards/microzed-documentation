@@ -12,105 +12,7 @@ Install
 
 Build
 =====
-
-.. important::
-
- A working internet connection, several GB of free disk space and several hours are required by the build process
-
-1. Select Architech's virtual machine from the list of virtual machines inside Virtual Box application
-
-.. image:: _static/vdi_machine_listed.png
-    :align: center
-
-2. Click on the icon *Start* button in the toolbar and wait until the virtual machine is ready
-
-.. image:: _static/vbStart.png
-    :align: center
-
-
-3. Double click on *Architech SDK* icon you have on the virtual machine desktop.
-
-.. image:: _static/splash0.jpg
-    :align: center
-
-4. The first screen gives you two choices: *ArchiTech* and *3rd Party*. Choose *ArchiTech*.
-
-.. image:: _static/splash1.jpg
-    :align: center
-
-5. Select ZedBoard as board you want develop on. 
-
-.. image:: _static/splashscreen_board_selection.jpg
-    :align: center
-
-6. A new screen opens up from where you can perform a set of actions. Click on *Run bitbake* to obtain a terminal ready to start to build an image.
-
-.. image:: _static/splash3.jpg
-    :align: center
-
-7. Open *local.conf* file:
-
-.. raw:: html
-
- <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-201' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-201" class="language-markup">gedit conf/local.conf</code></pre>
- <script src="_static/prism.js"></script>
- <script src="_static/select_text.js"></script>
- </div>
-
-8. Go to the end of the file and add the following lines:
-
-.. raw:: html
-
- <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-202' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-202" class="language-markup">EXTRA_IMAGE_FEATURES_append = " tools-debug debug-tweaks"
- IMAGE_INSTALL_append = " tcf-agent"</code></pre>
- <script src="_static/prism.js"></script>
- <script src="_static/select_text.js"></script>
- </div>
-
-This will trigger the installation of a features set onto the final root file system, like *tcf-agent* and *gdbserver*.
-
-9. Save the file and close gedit.
-
-10. Build *core-image-minimal-dev* image by means of the following command:
-
-.. raw:: html
-
- <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-203' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-203" class="language-markup">bitbake core-image-minimal-dev</code></pre>
- <script src="_static/prism.js"></script>
- <script src="_static/select_text.js"></script>
- </div>
-
-At the end of the build process, the image will be saved inside directory:
-
-.. raw:: html
-
- <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-204' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-204" class="language-markup">/home/architech/architech_sdk/architech/zedboard/yocto/build/tmp/deploy/images/zedboard-zynq7</code></pre>
- <script src="_static/prism.js"></script>
- <script src="_static/select_text.js"></script>
- </div>
-
-11. Setup *sysroot* directory on your host machine:
-
-.. raw:: html
-
- <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-205' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-205" class="language-markup">sudo tar -xzf /home/architech/architech_sdk/architech/zedboard/yocto/build/tmp/deploy/images/zedboard-zynq7/core-image-minimal-dev-zedboard-zynq7.tar.gz -C /home/architech/architech_sdk/architech/zedboard/sysroot/</code></pre>
- <script src="_static/prism.js"></script>
- <script src="_static/select_text.js"></script>
- </div>
-
-.. note::
-
- **sudo** password is: "**architech**"
+.. include:: quick_build.rst
 
 .. _quick_deploy_rootfs_label:
 
@@ -129,24 +31,32 @@ Code
 
 The time to create a simple *HelloWorld!* application using **Eclipse** has come. 
 
-1. Return to the **Splashscreen**, which we left on ZedBoard board screen, and click on *Develop with Eclipse*.
+1. Return to the **Splashscreen**, which we left on Microzed board screen, and click on *Develop with Eclipse*.
 
 .. image:: _static/splash4.jpg
     :align: center
 
-2. Go to *File→ New→ Project*, select *C/C++→ C Project* and press *next* button.
+2. Go to *File→ New→ Project...*, in the node "C/C++" select *C Project* and press *next* button.
 
 .. image:: _static/eclipse-newprj1.jpg
     :align: center
 
-3. Insert *HelloWorld* as project name, select *Hello World ANSI C Autotools Project* and press *next* button.
+3. Insert *HelloWorld* as project name, open the node *Yocto Project ADT Autotools Project* and select *Hello World ANSI C Autotools Project* and press *next* button.
 
 .. image:: _static/eclipse-new-project.jpg
     :align: center
 
 4. Insert *Author* field and click on *Finish* button. Select *Yes* on the *Open Associated Perspective?* question.
 
-5. Build the project by selecting *Project→ Build All*.
+.. image:: _static/eclipse-author.jpg
+    :align: center
+
+5. Open the windows properties clicking on *Project→ Properties* and select *Yocto Project Settings*. Check *Use project specific settings* in order to use the pengwyn cross-toolchain.
+
+.. image:: _static/eclipse-properties.jpg
+    :align: center
+
+5. Click on *OK* button and build the project by selecting *Project→ Build All*.
 
 Debug
 =====
@@ -158,8 +68,8 @@ Make sure the board can be seen by your host machine:
 .. raw:: html
 
  <div>
- <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-board-261' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-board-261" class="language-markup">ifconfig eth0 192.168.0.10</code></pre>
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-board-231' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-board-231" class="language-markup">ifconfig eth0 192.168.0.10</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -167,8 +77,8 @@ Make sure the board can be seen by your host machine:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-206' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-206" class="language-markup">ping 192.168.0.10</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-141' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-141" class="language-markup">ping 192.168.0.10</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -178,8 +88,8 @@ If the output is similar to this one:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-207' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-207" class="language-markup">64 bytes from 192.168.0.100: icmp_req=1 ttl=64 time=0.946 ms
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-142' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-142" class="language-markup">64 bytes from 192.168.0.100: icmp_req=1 ttl=64 time=0.946 ms
  64 bytes from 192.168.0.100: icmp_req=2 ttl=64 time=0.763 ms
  64 bytes from 192.168.0.100: icmp_req=3 ttl=64 time=0.671 ms
  64 bytes from 192.168.0.100: icmp_req=4 ttl=64 time=0.793 ms</code></pre>
@@ -187,20 +97,20 @@ If the output is similar to this one:
  <script src="_static/select_text.js"></script>
  </div>
 
-then the ethernet connection is ok. Enable the remote debug with Yocto by typing this command on ZedBoard console:
+then the ethernet connection is ok. Enable the remote debug with Yocto by typing this command on Microzed console:
 
 .. raw:: html
 
  <div>
- <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-board-262' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-board-262" class="language-markup">/etc/init.d/tcf-agent restart</code></pre>
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-board-232' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-board-232" class="language-markup">/etc/init.d/tcf-agent restart</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
 
 On the Host machine, follow these steps to let **Eclipse** deploy and debug your application:
 
-* Select Run→ Debug Configurations...
+* Select *Run→ Debug Configurations...*
 * In the left area, expand *C/C++Remote Application*.
 * Locate your project and select it to bring up a new tabbed view in the *Debug Configurations* Dialog.
 
@@ -228,7 +138,7 @@ On the Host machine, follow these steps to let **Eclipse** deploy and debug your
 .. image:: _static/remotepath.jpg
     :align: center
 
-* Enter also in the path the name of the application you want to debug. (e.g. Hello)
+* Enter also in the path the name of the application you want to debug. (e.g. HelloWorld)
 
 .. image:: _static/debug2.jpg
     :align: center
@@ -243,8 +153,8 @@ On the Host machine, follow these steps to let **Eclipse** deploy and debug your
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-208' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-208" class="language-markup">/home/architech/architech_sdk/architech/zedboard/toolchain/sysroots/i686-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gdb</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-143' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-143" class="language-markup">/home/architech/architech_sdk/architech/microzed/toolchain/sysroots/i686-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gdb</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -255,9 +165,9 @@ On the Host machine, follow these steps to let **Eclipse** deploy and debug your
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-209' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-209" class="language-markup">/home/architech/architech_sdk/architech/zedboard/sysroot/lib
- /home/architech/architech_sdk/architech/zedboard/sysroot/usr/lib</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-host-144' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-host-144" class="language-markup">/home/architech/architech_sdk/architech/microzed/sysroot/lib
+ /home/architech/architech_sdk/architech/microzed/sysroot/usr/lib</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -268,3 +178,4 @@ On the Host machine, follow these steps to let **Eclipse** deploy and debug your
 .. important::
 
  If debug does not work, check on the board if *tcf-agent* is running and *gdbserver* has been installed.
+ You can ignore the message "Cannot access memory at address 0x0".

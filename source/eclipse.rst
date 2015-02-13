@@ -2,7 +2,7 @@ Eclipse
 =======
 
 Eclipse is an integrated development environment (IDE). It contains a base workspace
-and the Yocto plug-in system to compile and debug a program for ZedBoard. Hereafter,
+and the Yocto plug-in system to compile and debug a program for Microzed. Hereafter,
 the operating system that runs the IDE/debugger will be named host machine, and the
 board being debugged will be named target machine. The host machine could be running
 as a virtual machine guest operating system, anyway, the documentation for the host
@@ -15,7 +15,7 @@ To write your application you need:
 
 * a media with the :ref:`root filesystem <rootfs_label>` installed and, if necessary, the bootloader
 
-* ZedBoard :ref:`powered up <poweron_label>` with the aforementioned root file system
+* Microzed :ref:`powered up <poweron_label>` with the aforementioned root file system
 
 * a working :ref:`serial console <serial_console_label>` terminal
 
@@ -80,7 +80,7 @@ To add more libraries to compile:
 
 .. note::
 
- All libraries must be located in */home/architech/architech_sdk/architech/zedboard/sysroot* subdirectories.
+ All libraries must be located in */home/architech/architech_sdk/architech/microzed/sysroot* subdirectories.
 
 .. image:: _static/autotools.jpg
     :align: center
@@ -90,13 +90,13 @@ To add more libraries to compile:
 Deploying and Debugging the Application
 ---------------------------------------
 
-Connect ZedBoard console to your PC and power-on the board. Once you built the project and the board is running the image, use minicom to run **tcf-agent** program in target board:
+Connect Microzed console to your PC and power-on the board. Once you built the project and the board is running the image, use minicom to run **tcf-agent** program in target board:
 
 .. raw:: html
 
  <div>
- <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'eclipse_rst-board-211' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="eclipse_rst-board-211" class="language-markup">zedboard login: root
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'eclipse_rst-board-251' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="eclipse_rst-board-251" class="language-markup">microzed login: root
  /etc/init.d/tcf-agent restart</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
@@ -132,7 +132,7 @@ On the Host machine, follow these steps to let **Eclipse** deploy and debug your
 .. image:: _static/remotepath.jpg
     :align: center
 
-* Enter also in the path the name of the application you want to debug. (e.g. Hello)
+* Enter also in the target path the name of the application you want to debug. (e.g. HelloWorld)
 
 .. image:: _static/debug2.jpg
     :align: center
@@ -147,8 +147,8 @@ On the Host machine, follow these steps to let **Eclipse** deploy and debug your
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'eclipse_rst-host-31' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="eclipse_rst-host-31" class="language-markup">/home/architech/architech_sdk/architech/zedboard/toolchain/sysroots/i686-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gdb</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'eclipse_rst-host-161' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="eclipse_rst-host-161" class="language-markup">/home/architech/architech_sdk/architech/microzed/toolchain/sysroots/i686-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gdb</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -159,9 +159,9 @@ On the Host machine, follow these steps to let **Eclipse** deploy and debug your
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'eclipse_rst-host-32' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="eclipse_rst-host-32" class="language-markup">/home/architech/architech_sdk/architech/zedboard/sysroot/lib
- /home/architech/architech_sdk/architech/zedboard/sysroot/usr/lib</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'eclipse_rst-host-162' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="eclipse_rst-host-162" class="language-markup">/home/architech/architech_sdk/architech/microzed/sysroot/lib
+ /home/architech/architech_sdk/architech/microzed/sysroot/usr/lib</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>

@@ -26,17 +26,17 @@ The SD card has to be prepared with two partitions:
 
 * an *EXT2* partition to contain the root file system
 
-The SD card has to be inserted in **J12**.
+The SD card has to be inserted in **J6**.
 
-Furthermore, on the board there is a set of switches related to the boot process. Verify ZedBoard
-boot mode (JP7-JP11) and MIO0 (JP6) jumpers are set like in the following picture:
+Furthermore, on the board there is a set of switches related to the boot process. Verify Microzed
+boot mode (JP1, JP2 and JP3) jumpers are set like in the following picture:
 
-.. image:: _static/board_boot_switches.png
+.. image:: _static/sdcard-jumpers.jpg
     :align: center
 
 that means *boot from SD card*, as described in the Hardware User Guide:
 
- `http://www.zedboard.org/documentation/1521 <http://www.zedboard.org/documentation/1521>`_
+ `http://www.microzed.org/support/documentation/1519 <http://www.microzed.org/support/documentation/1519>`_
 
 BOOT.BIN
 --------
@@ -79,8 +79,8 @@ You will find it inside directory:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-11' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-11" class="language-markup">/home/architech/architech_sdk/architech/zedboard/yocto/build/tmp/deploy/images/zedboard-zynq7/uImage</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-181' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-181" class="language-markup">/home/architech/architech_sdk/architech/microzed/yocto/build/tmp/deploy/images/microzed/uImage</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -116,8 +116,8 @@ You need to customize it by means of a file named **uEnv.txt** with these comman
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-12' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-12" class="language-markup">bootcmd=fatload mmc 0 0x3000000 uImage; fatload mmc 0 0x2A00000 devicetree.dtb; bootm 0x3000000 - 0x2A00000
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-182' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-182" class="language-markup">bootcmd=fatload mmc 0 0x3000000 uImage; fatload mmc 0 0x2ff0000 devicetree.dtb; bootm 0x3000000 - 0x2fF0000
  uenvcmd=boot
  </code></pre>
  <script src="_static/prism.js"></script>
@@ -145,8 +145,8 @@ a root file system. All the built root file systems are stacked under directory:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-13' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-13" class="language-markup">/home/architech/architech_sdk/architech/zedboard/yocto/build/tmp/deploy/images/zedboard-zynq7/</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-183' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-183" class="language-markup">/home/architech/architech_sdk/architech/microzed/yocto/build/tmp/deploy/images/microzed/</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -171,9 +171,9 @@ partition as an *EXT2* (name it **rootfs**), make it big enough to fill the free
 disk size.
 
 You are going to need the following files: BOOT.BIN, uEnv.txt, uImage, devicetree.dtb,
-*<image>*-zedboard-zynq7.tar.gz.
+*<image>*-microzed.tar.gz.
 *<image>* is the recipe name used to build your image, for example: core-image-minimal-dev, so that
-the rootfs tarball name would be core-image-minimal-dev-zedboard-zynq7.tar.gz.
+the rootfs tarball name would be core-image-minimal-dev-microzed.tar.gz.
 
 Now, we assume that the first partition of the SD card gets mounted (in your SDK virtual machine)
 under:
@@ -181,8 +181,8 @@ under:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-14' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-14" class="language-markup">/media/boot</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-184' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-184" class="language-markup">/media/boot</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -192,8 +192,8 @@ while the second partition gets mounted under:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-15' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-15" class="language-markup">/media/rootfs</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-185' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-185" class="language-markup">/media/rootfs</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -208,8 +208,8 @@ Furthermore, we assume you previously downloaded files *BOOT.BIN*, *uEnv.txt*, a
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-16' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-16" class="language-markup">/home/architech/Documents/zedboard</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-186' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-186" class="language-markup">/home/architech/Documents/microzed</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -219,11 +219,11 @@ Ok then, we can finally deploy bootloader and kernel on the first partition of t
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-17' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-17" class="language-markup">cp /home/architech/Documents/zedboard/BOOT.BIN /media/boot/
- cp /home/architech/Documents/zedboard/uEnv.txt /media/boot/
- cp /home/architech/Documents/zedboard/devicetree.dtb /media/boot/
- cp /home/architech/architech_sdk/architech/zedboard/yocto/build/tmp/deploy/images/zedboard-zynq7/uImage /media/boot/</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-187' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-187" class="language-markup">cp /home/architech/Documents/microzed/BOOT.BIN /media/boot/
+ cp /home/architech/Documents/microzed/uEnv.txt /media/boot/
+ cp /home/architech/Documents/microzed/devicetree.dtb /media/boot/
+ cp /home/architech/architech_sdk/architech/microzed/yocto/build/tmp/deploy/images/microzed/uImage /media/boot/</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -233,9 +233,9 @@ and the root file system on the second partition of the SD card:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-18' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-18" class="language-markup">sudo rm -rf /media/rootfs/*
- sudo tar -xzf /home/architech/architech_sdk/architech/zedboard/yocto/build/tmp/deploy/images/zedboard-zynq7/&lt;image&gt;-zedboard-zynq7.tar.gz -C /media/rootfs/</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-188' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-188" class="language-markup">sudo rm -rf /media/rootfs/*
+ sudo tar -xzf /home/architech/architech_sdk/architech/microzed/yocto/build/tmp/deploy/images/microzed/&lt;image&gt;-microzed.tar.gz -C /media/rootfs/</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>

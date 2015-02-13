@@ -1,6 +1,12 @@
 Yocto
 =====
 
+If you have launched machine_installer or run_install.sh script, yocto is already installed. 
+The following steps are useful for understood how the sdk works "under the hood".
+
+Installation with repo
+----------------------
+
 The easiest way to setup and keep all the necessary meta-layers in sync with upstream repositories
 is achieved by means of Google's **repo** tool.
 The following steps are necessary for a clean installation:
@@ -10,8 +16,8 @@ The following steps are necessary for a clean installation:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'yocto_by_hand_rst-host-71' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="yocto_by_hand_rst-host-71" class="language-markup">mkdir -p ~/bin
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'yocto_by_hand_rst-host-41' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="yocto_by_hand_rst-host-41" class="language-markup">mkdir -p ~/bin
  sudo apt-get install curl
  curl http://commondatastorage.googleapis.com/git-repo-downloads/repo &gt; ~/bin/repo
  chmod a+x ~/bin/repo</code></pre>
@@ -24,8 +30,8 @@ The following steps are necessary for a clean installation:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'yocto_by_hand_rst-host-72' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="yocto_by_hand_rst-host-72" class="language-markup">echo $PATH</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'yocto_by_hand_rst-host-42' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="yocto_by_hand_rst-host-42" class="language-markup">echo $PATH</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -35,8 +41,8 @@ The following steps are necessary for a clean installation:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'yocto_by_hand_rst-host-73' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="yocto_by_hand_rst-host-73" class="language-markup">export PATH="$PATH:${HOME}/bin"</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'yocto_by_hand_rst-host-43' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="yocto_by_hand_rst-host-43" class="language-markup">export PATH="$PATH:${HOME}/bin"</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -50,8 +56,8 @@ The following steps are necessary for a clean installation:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'yocto_by_hand_rst-host-74' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="yocto_by_hand_rst-host-74" class="language-markup">repo init -u https://github.com/architech-boards/zedboard-manifest.git -b dizzy -m manifest.xml</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'yocto_by_hand_rst-host-44' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="yocto_by_hand_rst-host-44" class="language-markup">repo init -u https://github.com/architech-boards/microzed-manifest.git -b dizzy -m manifest.xml</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -61,15 +67,18 @@ The following steps are necessary for a clean installation:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'yocto_by_hand_rst-host-75' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="yocto_by_hand_rst-host-75" class="language-markup">repo sync</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'yocto_by_hand_rst-host-45' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="yocto_by_hand_rst-host-45" class="language-markup">repo sync</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
 
 By the end of the last step, all the necessary meta-layers should be in place, anyway, you still need to 
-edit your **local.conf** and **bblayers.conf** to compile for zedboard-zynq7 machine and using all the downloaded
+edit your **local.conf** and **bblayers.conf** to compile for microzed machine and using all the downloaded
 meta-layers.
+
+Updating with repo
+------------------
 
 When you want your local repositories to be updated, just:
 
@@ -82,19 +91,22 @@ When you want your local repositories to be updated, just:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'yocto_by_hand_rst-host-76' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="yocto_by_hand_rst-host-76" class="language-markup">repo sync</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'yocto_by_hand_rst-host-46' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="yocto_by_hand_rst-host-46" class="language-markup">repo sync</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
+
+Install Yocto by yourself
+-------------------------
 
 If you really want to download everything by hand, just clone branch *dizzy* of *meta-xilinx*:
 
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'yocto_by_hand_rst-host-77' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="yocto_by_hand_rst-host-77" class="language-markup">git clone -b dizzy git://git.yoctoproject.org/meta-xilinx.git</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'yocto_by_hand_rst-host-47' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="yocto_by_hand_rst-host-47" class="language-markup">git clone -b dizzy git://git.yoctoproject.org/meta-xilinx.git</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>

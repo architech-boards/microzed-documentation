@@ -1,4 +1,4 @@
-On ZedBoard there is an USB-UART port (**J14**) labeled **UART**
+On Microzed the same USB-UART port (**J2**) used for power-on is used also for serial console.
 
 .. image:: _static/board-uart.jpg
 
@@ -19,8 +19,8 @@ the name of the device is by looking to the kernel messages, so:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'serial_console_rst-host-121' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="serial_console_rst-host-121" class="language-markup">sudo dmesg -c</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'serial_console_rst-host-91' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="serial_console_rst-host-91" class="language-markup">sudo dmesg -c</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -32,8 +32,8 @@ the name of the device is by looking to the kernel messages, so:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'serial_console_rst-host-122' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="serial_console_rst-host-122" class="language-markup">dmesg</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'serial_console_rst-host-92' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="serial_console_rst-host-92" class="language-markup">dmesg</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -43,30 +43,24 @@ the name of the device is by looking to the kernel messages, so:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'serial_console_rst-host-123' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="serial_console_rst-host-123" class="language-markup">[29629.785374] usb 3-2: &gt;new full-speed USB device number 4 using xhci_hcd
- [29629.806908] usb 3-2: &gt;New USB device found, idVendor=04b4, idProduct=0008
- [29629.806915] usb 3-2: &gt;New USB device strings: Mfr=1, Product=2, SerialNumber=4
- [29629.806919] usb 3-2: &gt;Product: Cypress-USB2UART-0123456
- [29629.806922] usb 3-2: &gt;Manufacturer: 2012 Cypress Semiconductor
- [29629.806925] usb 3-2: &gt;SerialNumber: 0201258B0816
- [29629.858654] cdc_acm 3-2:1.0: &gt;This device cannot do calls on its own. It is not a modem.
- [29629.858705] cdc_acm 3-2:1.0: &gt;ttyACM0: USB ACM device
- [29629.859345] usbcore: registered new interface driver cdc_acm
- [29629.859347] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'serial_console_rst-host-93' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="serial_console_rst-host-93" class="language-markup">[ 5522.462414] usb 2-1.1: new full-speed USB device number 6 using ehci_hcd
+ [ 5522.557574] cp210x 2-1.1:1.0: cp210x converter detected
+ [ 5522.630151] usb 2-1.1: reset full-speed USB device number 6 using ehci_hcd
+ [ 5522.723501] usb 2-1.1: cp210x converter now attached to /dev/ttyUSB0</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
 
-As you can see, here the device has been recognized as **/dev/ttyACM0**.
+As you can see, here the device has been recognized as **/dev/ttyUSB0**.
 
 Now that you know the device name, run *minicom*:
 
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'serial_console_rst-host-124' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="serial_console_rst-host-124" class="language-markup">sudo minicom -ws</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'serial_console_rst-host-94' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="serial_console_rst-host-94" class="language-markup">sudo minicom -ws</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -76,8 +70,8 @@ If minicom is not installed, you can install it with:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'serial_console_rst-host-125' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="serial_console_rst-host-125" class="language-markup">sudo apt-get install minicom</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'serial_console_rst-host-95' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="serial_console_rst-host-95" class="language-markup">sudo apt-get install minicom</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -87,9 +81,9 @@ then you can setup your port with these parameters:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'serial_console_rst-host-126' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="serial_console_rst-host-126" class="language-markup">+-----------------------------------------------------------------------+
- | A -    Serial Device      : /dev/ttyACM0                              |
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'serial_console_rst-host-96' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="serial_console_rst-host-96" class="language-markup">+-----------------------------------------------------------------------+
+ | A -    Serial Device      : /dev/ttyUSB0                              |
  | B - Lockfile Location     : /var/lock                                 |
  | C -   Callin Program      :                                           |
  | D -  Callout Program      :                                           |
@@ -109,7 +103,7 @@ then you can setup your port with these parameters:
  <script src="_static/select_text.js"></script>
  </div>
 
-If on your system the device has not been recognized as */dev/ttyACM0*, just replace */dev/ttyACM0*
+If on your system the device has not been recognized as */dev/ttyUSB0*, just replace */dev/ttyUSB0*
 with the proper device.
 
 Once you are done configuring the serial port, you are back to *minicom* main menu and you can select *exit*.

@@ -1,20 +1,11 @@
 Power-On
 ========
 
-The board is shipped with an external power adapter with two different socket adapters.
+Microzed takes the power from the mini-USB connector *J2*. The board is not shipped with an external power adapter.
 
-.. image:: _static/board_poweron_power_supply.jpg
+.. image:: _static/microzed-poweron.jpg
     :align: center
 
-Sort out the socket adapter that is right for you. Place it properly.
-
-.. image:: _static/board_poweron_place_socket_adapter.jpg
-    :align: center
-
-Push it and rotate it clockwise until you hear a slight click.
-
-.. image:: _static/board_poweron_socket_adapter_placed.jpg
-    :align: center
-
-To power-on the board, just connect the external power adapter to ZedBoard connector **J20**
-and move switch **SW8** to the "On" position.
+To power-on the board, just connect the mini-USB from PC to Microzed connector.
+On connector *J2* you can also have the serial console, so, during your daily development use,
+you would just connect your workstation to the board using the mini-USB.

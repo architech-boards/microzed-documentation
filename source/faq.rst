@@ -14,14 +14,10 @@ The password for the default user, that is **architech**, is:
 
  architech
 
-What is **sudo**?
------------------
+What is the password of **sudo**?
+---------------------------------
 
-**sudo** is a program for Unix-like computer operating systems that allows users to run programs/commands
-with the security privileges of another user, normally the superuser or root. Not all the users can call
-sudo, only the **sudoers**, **architech** (the default user of the virtual machine) user is a sudoer.
-When you run a command preceeded by sudo Linux will ask you the user password, for **architech** user the
-password is **architech**.
+The default password of **architech** is **architech**. If you are searching more information about **sudo** command please refer to :ref:`sudo <sudo_info_label>` section of the :ref:`appendix <appendix_label>`.
 
 What is the password for user root?
 -----------------------------------
@@ -35,5 +31,16 @@ command:
 
 Linux will ask you (twice, the second time is just for confirmation) to write the password for user root.
 
-ZedBoard
+What are device files? How can I use them?
+------------------------------------------
+
+Please refer to :ref:`device files <device_files_label>` section of the :ref:`appendix <appendix_label>`.
+
+
+I have problems to download the vm, the server cut down the connection
+----------------------------------------------------------------------
+
+The site has limitation in bandwith. Use download manager and do not try to speed up the download. If you try to download fastly the server will broke up your download.
+
+Microzed
 ========

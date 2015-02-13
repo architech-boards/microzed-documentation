@@ -1,7 +1,7 @@
 Hardware
 ========
 
-The hardware documentation of ZedBoard can be found here:
+The hardware documentation of Microzed can be found here:
 
-`http://www.zedboard.org/documentation/1521 <http://www.zedboard.org/documentation/1521>`_
+`http://www.microzed.org/support/documentation/1519 <http://www.microzed.org/support/documentation/1519>`_
 
