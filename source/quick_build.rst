@@ -50,10 +50,14 @@
  <div>
  <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_build_rst-host-32' );">select</a></div>
  <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_build_rst-host-32" class="language-markup">EXTRA_IMAGE_FEATURES_append = " tools-debug debug-tweaks"
- IMAGE_INSTALL_append = " tcf-agent"</code></pre>
+ IMAGE_INSTALL_append = " tcf-agent gdbserver"
+ or
+ EXTRA_IMAGE_FEATURES_append = " tools-debug debug-tweaks"
+ IMAGE_FEATURES_append = " eclipse-debug"</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
+
 
 This will trigger the installation of a features set onto the final root file system, like *tcf-agent* and *gdbserver*.
 

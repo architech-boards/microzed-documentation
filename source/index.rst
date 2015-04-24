@@ -4,7 +4,7 @@ Architech's Microzed documentation
 
 :Version: 2.0.0A
 :Copyright: Architech
-:Date: 13/02/15
+:Date: 26/03/15
 
 .. image:: _static/board.png
     :align: center

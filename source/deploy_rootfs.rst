@@ -26,8 +26,6 @@ Internet:
 
 * `Download file BOOT.BIN <_static/BOOT.BIN>`_
 
-* `Download devicetree.dtb <_static/devicetree.dtb>`_
-
 * `Download file uEnv.txt <_static/uEnv.txt>`_
 
 Now, we assume that the first partition of the SD card gets mounted (in your SDK virtual machine)
@@ -66,7 +64,7 @@ Ok then, we can finally deploy bootloader and kernel on the first partition of t
  <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'deploy_rootfs_rst-host-114' );">select</a></div>
  <pre class="line-numbers pre-replacer" data-start="1"><code id="deploy_rootfs_rst-host-114" class="language-markup">cp /home/architech/Documents/microzed/BOOT.BIN /media/boot/
  cp /home/architech/Documents/microzed/uEnv.txt /media/boot/
- cp /home/architech/Documents/microzed/devicetree.dtb /media/boot/
+ cp /home/architech/architech_sdk/architech/microzed/yocto/build/tmp/deploy/images/microzed/microzed-mmcblk0p2.dtb /media/boot/devicetree.dtb
  cp /home/architech/architech_sdk/architech/microzed/yocto/build/tmp/deploy/images/microzed/uImage /media/boot/</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>

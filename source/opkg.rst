@@ -149,7 +149,7 @@ You can easily setup a new repository for your custom builds:
 
  <div>
  <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'opkg_rst-host-134' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="opkg_rst-host-134" class="language-markup">sudo ln -s /home/architech/architech_sdk/architech/microzed/yocto/build/tmp/deploy/ipk/ /var/www/microzed-ipk</code></pre>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="opkg_rst-host-134" class="language-markup">sudo ln -s /home/architech/architech_sdk/architech/microzed/yocto/build/tmp/deploy/ipk/ /var/www/html/microzed-ipk</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>

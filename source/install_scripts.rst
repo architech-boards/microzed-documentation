@@ -1,7 +1,7 @@
 Installation
 ============
 
-Architech's Yocto based SDK is built on top of **Ubuntu 12.04 32bit**, hence all the scripts
+Architech's Yocto based SDK is built on top of **Ubuntu 14.04 32bit**, hence all the scripts
 provided are proven to work on such a system.
 
 
@@ -28,7 +28,7 @@ you need to download and run a system wide installation script:
 
 where *-g* option asks the script to install and configure a few graphic customization,
 while *-p* option asks the script to install the required packages on the machine.
-If you want to install the toolchain on a machine not equal to Ubuntu 12.04 32bit then
+If you want to install the toolchain on a machine not equal to Ubuntu 14.04 32bit then
 you may want to read the script, install the required packages by hand, and run it without
 options. You might need to recompile the Qt application used to render the splashscreen.
 

@@ -22,7 +22,7 @@ The default password of **architech** is **architech**. If you are searching mor
 What is the password for user root?
 -----------------------------------
 
-By default, Ubuntu 12.04 32bit comes with no password defined for **roor** user, to set it run the following
+By default, Ubuntu 14.04 32bit comes with no password defined for **roor** user, to set it run the following
 command:
 
 .. host::

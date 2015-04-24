@@ -10,7 +10,7 @@ ways to do that:
 
 * if you already built Microzed's bootloader with *Bitbake*, then you already have them on your (virtual) disk, otherwise
 
-* you can download and patch them.
+* you can download them.
 
 *Bitbake* will place *u-boot* sources under:
 
@@ -18,10 +18,11 @@ ways to do that:
 
  <div>
  <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-71' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-71" class="language-markup">/path/to/build/tmp/work/microzed-poky-linux-gnueabi/u-boot-xlnx/v2013.01-xilinx+gitAUTOINC+20a6cdd301-r1/git</code></pre>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-71" class="language-markup">/path/to/build/tmp/work/microzed-poky-linux-gnueabi/u-boot-xlnx/v2014.01-xilinx+gitAUTOINC+2a0536fa48-r0/git</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
+
 
 this means that within the virtual machine you will find them under:
 
@@ -29,7 +30,7 @@ this means that within the virtual machine you will find them under:
 
  <div>
  <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-72' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-72" class="language-markup">/home/architech/architech_sdk/architech/microzed/yocto/build/tmp/work/microzed-poky-linux-gnueabi/u-boot-xlnx/v2013.01-xilinx+gitAUTOINC+20a6cdd301-r1/git</code></pre>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-72" class="language-markup">/home/architech/architech_sdk/architech/microzed/yocto/build/tmp/work/microzed-poky-linux-gnueabi/u-boot-xlnx/v2014.01-xilinx+gitAUTOINC+2a0536fa48-r0/git</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -50,22 +51,26 @@ out the proper commit:
  <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-73" class="language-markup">cd ~/Documents
  git clone git://github.com/Xilinx/u-boot-xlnx.git
  cd u-boot-xlnx
- git checkout 20a6cdd301941b97961c9c5425b5fbb771321aac</code></pre>
+ git checkout 2a0536fa48db1fc5332e3cd33b846d0da0c8bc1e</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
 
-and by properly patching the sources:
+and in order to compile the u-boot, run the following commands:
 
 .. raw:: html
 
  <div>
  <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'bootloader_rst-host-74' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-74" class="language-markup">cd ..
- patch -p1 -d u-boot-xlnx/ &lt; /home/architech/architech_sdk/architech/microzed/yocto/meta-xilinx/recipes-bsp/u-boot/u-boot-xlnx/*</code></pre>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="bootloader_rst-host-74" class="language-markup">source ~/architech_sdk/architech/microzed/toolchain/environment-nofs
+ export LDFLAGS="-L ~/architech_sdk/architech/microzed/toolchain/sysroots/armv7a-vfp-neon-poky-linux-gnueabi/usr/lib/arm-poky-linux-gnueabi/4.9.1/"
+ make ARCH=arm distclean
+ make zynq_zed_config
+ USE_PRIVATE_LIBGCC="yes" make all</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
+
 
 The Cross-Toolchain
 -------------------
