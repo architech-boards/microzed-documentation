@@ -9,8 +9,8 @@ You can get it with *git*:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'meta_layer_rst-host-191' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="meta_layer_rst-host-191" class="language-markup">git clone -b dizzy https://github.com/architech-boards/meta-microzed.git</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'meta_layer_rst-host-71' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="meta_layer_rst-host-71" class="language-markup">git clone -b dizzy https://github.com/architech-boards/meta-microzed.git</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>

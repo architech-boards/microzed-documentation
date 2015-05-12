@@ -79,8 +79,8 @@ You will find it inside directory:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-181' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-181" class="language-markup">/home/architech/architech_sdk/architech/microzed/yocto/build/tmp/deploy/images/microzed/uImage</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-41' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-41" class="language-markup">/home/architech/architech_sdk/architech/microzed/yocto/build/tmp/deploy/images/microzed/uImage</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -116,8 +116,8 @@ You need to customize it by means of a file named **uEnv.txt** with these comman
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-182' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-182" class="language-markup">bootcmd=fatload mmc 0 0x3000000 uImage; fatload mmc 0 0x2ff0000 devicetree.dtb; bootm 0x3000000 - 0x2fF0000
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-42' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-42" class="language-markup">bootcmd=fatload mmc 0 0x3000000 uImage; fatload mmc 0 0x2ff0000 devicetree.dtb; bootm 0x3000000 - 0x2fF0000
  uenvcmd=boot
  </code></pre>
  <script src="_static/prism.js"></script>
@@ -145,8 +145,8 @@ a root file system. All the built root file systems are stacked under directory:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-183' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-183" class="language-markup">/home/architech/architech_sdk/architech/microzed/yocto/build/tmp/deploy/images/microzed/</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-43' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-43" class="language-markup">/home/architech/architech_sdk/architech/microzed/yocto/build/tmp/deploy/images/microzed/</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -181,8 +181,8 @@ under:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-184' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-184" class="language-markup">/media/boot</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-44' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-44" class="language-markup">/media/boot</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -192,8 +192,8 @@ while the second partition gets mounted under:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-185' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-185" class="language-markup">/media/rootfs</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-45' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-45" class="language-markup">/media/rootfs</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -208,8 +208,8 @@ Furthermore, we assume you previously downloaded files *BOOT.BIN*, *uEnv.txt*, a
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-186' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-186" class="language-markup">/home/architech/Documents/microzed</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-46' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-46" class="language-markup">/home/architech/Documents/microzed</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -219,8 +219,8 @@ Ok then, we can finally deploy bootloader and kernel on the first partition of t
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-187' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-187" class="language-markup">cp /home/architech/Documents/microzed/BOOT.BIN /media/boot/
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-47' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-47" class="language-markup">cp /home/architech/Documents/microzed/BOOT.BIN /media/boot/
  cp /home/architech/Documents/microzed/uEnv.txt /media/boot/
  cp /home/architech/Documents/microzed/devicetree.dtb /media/boot/
  cp /home/architech/architech_sdk/architech/microzed/yocto/build/tmp/deploy/images/microzed/uImage /media/boot/</code></pre>
@@ -233,8 +233,8 @@ and the root file system on the second partition of the SD card:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-188' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-188" class="language-markup">sudo rm -rf /media/rootfs/*
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'boot_rst-host-48' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="boot_rst-host-48" class="language-markup">sudo rm -rf /media/rootfs/*
  sudo tar -xzf /home/architech/architech_sdk/architech/microzed/yocto/build/tmp/deploy/images/microzed/&lt;image&gt;-microzed.tar.gz -C /media/rootfs/</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>

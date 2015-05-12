@@ -37,8 +37,8 @@
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_build_rst-host-31' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_build_rst-host-31" class="language-markup">gedit conf/local.conf</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_build_rst-host-11' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_build_rst-host-11" class="language-markup">gedit conf/local.conf</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -48,8 +48,8 @@
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_build_rst-host-32' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_build_rst-host-32" class="language-markup">EXTRA_IMAGE_FEATURES_append = " tools-debug debug-tweaks"
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_build_rst-host-12' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_build_rst-host-12" class="language-markup">EXTRA_IMAGE_FEATURES_append = " tools-debug debug-tweaks"
  IMAGE_INSTALL_append = " tcf-agent gdbserver"
  or
  EXTRA_IMAGE_FEATURES_append = " tools-debug debug-tweaks"
@@ -68,8 +68,8 @@ This will trigger the installation of a features set onto the final root file sy
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_build_rst-host-33' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_build_rst-host-33" class="language-markup">bitbake core-image-minimal-dev</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_build_rst-host-13' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_build_rst-host-13" class="language-markup">bitbake core-image-minimal-dev</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -79,8 +79,8 @@ At the end of the build process, the image will be saved inside directory:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_build_rst-host-34' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_build_rst-host-34" class="language-markup">/home/architech/architech_sdk/architech/microzed/yocto/build/tmp/deploy/images/microzed</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_build_rst-host-14' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_build_rst-host-14" class="language-markup">/home/architech/architech_sdk/architech/microzed/yocto/build/tmp/deploy/images/microzed</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -90,8 +90,8 @@ At the end of the build process, the image will be saved inside directory:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_build_rst-host-35' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_build_rst-host-35" class="language-markup">sudo tar -xzf /home/architech/architech_sdk/architech/microzed/yocto/build/tmp/deploy/images/microzed/core-image-minimal-dev-microzed.tar.gz -C /home/architech/architech_sdk/architech/microzed/sysroot/</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_build_rst-host-15' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_build_rst-host-15" class="language-markup">sudo tar -xzf /home/architech/architech_sdk/architech/microzed/yocto/build/tmp/deploy/images/microzed/core-image-minimal-dev-microzed.tar.gz -C /home/architech/architech_sdk/architech/microzed/sysroot/</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>

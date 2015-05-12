@@ -31,6 +31,13 @@ Code
 
 The time to create a simple *HelloWorld!* application using **Eclipse** has come. 
 
+.. note::
+
+ | Before to start remember to copy the cross-toolchain libreries to sysroot
+ | 
+ | cp -r /home/architech/architech_sdk/architech/microzed/toolchain/sysroots/armv7a-vfp-neon-poky-linux-gnueabi/* /home/architech/architech_sdk/architech/microzed/sysroot
+
+
 1. Return to the **Splashscreen**, which we left on Microzed board screen, and click on *Develop with Eclipse*.
 
 .. image:: _static/splash4.jpg
@@ -68,8 +75,8 @@ Make sure the board can be seen by your host machine:
 .. raw:: html
 
  <div>
- <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-board-231' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-board-231" class="language-markup">ifconfig eth0 192.168.0.10</code></pre>
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-board-251' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-board-251" class="language-markup">ifconfig eth0 192.168.0.10</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -102,8 +109,8 @@ then the ethernet connection is ok. Enable the remote debug with Yocto by typing
 .. raw:: html
 
  <div>
- <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-board-232' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-board-232" class="language-markup">/etc/init.d/tcf-agent restart</code></pre>
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'quick_rst-board-252' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="quick_rst-board-252" class="language-markup">/etc/init.d/tcf-agent restart</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>

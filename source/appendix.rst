@@ -28,8 +28,8 @@ In Linux, memory cards are generally named starting with *mmcblk*. For example i
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'appendix_rst-host-201' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="appendix_rst-host-201" class="language-markup">/dev/mmcblk0
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'appendix_rst-host-181' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="appendix_rst-host-181" class="language-markup">/dev/mmcblk0
  /dev/mmcblk1</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
@@ -42,8 +42,8 @@ So, for example if the "mmcblk0" countains 3 partitions, the operating system wi
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'appendix_rst-host-202' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="appendix_rst-host-202" class="language-markup">/dev/mmcblk0    /* device */
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'appendix_rst-host-182' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="appendix_rst-host-182" class="language-markup">/dev/mmcblk0    /* device */
  /dev/mmcblk0p0  /* first partition */
  /dev/mmcblk0p1  /* second partition */
  /dev/mmcblk0p2  /* third partition */</code></pre>
@@ -57,8 +57,8 @@ A machine with an hard disk and two pen drives would tipically have the followin
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'appendix_rst-host-203' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="appendix_rst-host-203" class="language-markup">/dev/sda
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'appendix_rst-host-183' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="appendix_rst-host-183" class="language-markup">/dev/sda
  /dev/sdb
  /dev/sbc</code></pre>
  <script src="_static/prism.js"></script>
@@ -72,8 +72,8 @@ As memory cards, the pen can have one or more partitions, so if for example we h
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'appendix_rst-host-204' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="appendix_rst-host-204" class="language-markup">/dev/sdc   /* device */
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'appendix_rst-host-184' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="appendix_rst-host-184" class="language-markup">/dev/sdc   /* device */
  /dev/sdc1  /* first partition */
  /dev/sdc2  /* second partition */</code></pre>
  <script src="_static/prism.js"></script>
@@ -96,8 +96,8 @@ To better filter out the information regarding the plug and play device we are i
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'appendix_rst-host-205' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="appendix_rst-host-205" class="language-markup">$ sudo dmesg -c</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'appendix_rst-host-185' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="appendix_rst-host-185" class="language-markup">$ sudo dmesg -c</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -107,8 +107,8 @@ now that the ring buffer has been emptied, we can plug the device and, after tha
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'appendix_rst-host-206' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="appendix_rst-host-206" class="language-markup">$ dmesg</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'appendix_rst-host-186' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="appendix_rst-host-186" class="language-markup">$ dmesg</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -118,8 +118,8 @@ On the Ubuntu machine (with kernel version *3.2.0-65-generic*) this documentatio
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'appendix_rst-host-207' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="appendix_rst-host-207" class="language-markup">[10553.164670] usb 2-1.2: new high-speed USB device number 7 using ehci_hcd
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'appendix_rst-host-187' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="appendix_rst-host-187" class="language-markup">[10553.164670] usb 2-1.2: new high-speed USB device number 7 using ehci_hcd
  [10553.261991] scsi7 : usb-storage 2-1.2:1.0
  [10554.262123] scsi 7:0:0:0: Direct-Access     USB      DISK 2.0         1219 PQ: 0 ANSI: 0 CCS
  [10554.264376] sd 7:0:0:0: Attached scsi generic sg2 type 0
@@ -143,8 +143,8 @@ As you can see, the operating system have recognized the usb device as *sdb* (th
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'appendix_rst-host-208' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="appendix_rst-host-208" class="language-markup">[10554.275287]  sdb: sdb1</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'appendix_rst-host-188' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="appendix_rst-host-188" class="language-markup">[10554.275287]  sdb: sdb1</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -155,8 +155,8 @@ On the very same machine of the previous example, the execution of this command:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'appendix_rst-host-209' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="appendix_rst-host-209" class="language-markup">$ sudo fdisk -l</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'appendix_rst-host-189' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="appendix_rst-host-189" class="language-markup">$ sudo fdisk -l</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -166,8 +166,8 @@ produces the following output:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'appendix_rst-host-2010' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="appendix_rst-host-2010" class="language-markup">Disk /dev/sda: 500.1 GB, 500107862016 bytes
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'appendix_rst-host-1810' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="appendix_rst-host-1810" class="language-markup">Disk /dev/sda: 500.1 GB, 500107862016 bytes
  255 heads, 63 sectors/track, 60801 cylinders, total 976773168 sectors
  Units = sectors of 1 * 512 = 512 bytes
  Sector size (logical/physical): 512 bytes / 512 bytes
@@ -239,8 +239,8 @@ Thanks to the previously introduced **fdisk** command, we know the partition to 
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'appendix_rst-host-2011' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="appendix_rst-host-2011" class="language-markup">$ mkdir -p /media/usbdisk</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'appendix_rst-host-1811' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="appendix_rst-host-1811" class="language-markup">$ mkdir -p /media/usbdisk</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -250,8 +250,8 @@ At this point, we have the information we need to execute the mounting. To sempl
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'appendix_rst-host-2012' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="appendix_rst-host-2012" class="language-markup">$ mount -t auto /dev/sdb1 /media/usbdisk</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'appendix_rst-host-1812' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="appendix_rst-host-1812" class="language-markup">$ mount -t auto /dev/sdb1 /media/usbdisk</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -261,8 +261,8 @@ The partition is now binded to */media/usbdisk* directory and its data are acces
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'appendix_rst-host-2013' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="appendix_rst-host-2013" class="language-markup">$ cd /media/usbdisk
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'appendix_rst-host-1813' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="appendix_rst-host-1813" class="language-markup">$ cd /media/usbdisk
  $ ls
  readme.txt</code></pre>
  <script src="_static/prism.js"></script>
@@ -274,8 +274,8 @@ now we can open the file, read it and, possibly, modify it.
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'appendix_rst-host-2014' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="appendix_rst-host-2014" class="language-markup">$ gedit readme.txt</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'appendix_rst-host-1814' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="appendix_rst-host-1814" class="language-markup">$ gedit readme.txt</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -285,8 +285,8 @@ When you want to disconnect the device, you need the inverse operation of **moun
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'appendix_rst-host-2015' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="appendix_rst-host-2015" class="language-markup">$ umount /media/usbdisk</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'appendix_rst-host-1815' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="appendix_rst-host-1815" class="language-markup">$ umount /media/usbdisk</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -302,8 +302,8 @@ On our example machine we have:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'appendix_rst-host-2016' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="appendix_rst-host-2016" class="language-markup">$ df -h
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'appendix_rst-host-1816' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="appendix_rst-host-1816" class="language-markup">$ df -h
  Filesystem      Size  Used Avail Use% Mounted on
  /dev/sda3        16G   11G  4.0G  74% /
  /dev/sda2       445G  408G   37G  92% /media/windows7</code></pre>

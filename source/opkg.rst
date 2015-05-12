@@ -108,8 +108,8 @@ To force *Bitbake* to include it in the next build, edit your configuration file
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'opkg_rst-host-131' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="opkg_rst-host-131" class="language-markup">/home/architech/architech_sdk/architech/microzed/yocto/build/conf/local.conf</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'opkg_rst-host-21' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="opkg_rst-host-21" class="language-markup">/home/architech/architech_sdk/architech/microzed/yocto/build/conf/local.conf</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -119,8 +119,8 @@ and add this line to it:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'opkg_rst-host-132' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="opkg_rst-host-132" class="language-markup">IMAGE_FEATURES_append = " package-management"</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'opkg_rst-host-22' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="opkg_rst-host-22" class="language-markup">IMAGE_FEATURES_append = " package-management"</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -137,8 +137,8 @@ You can easily setup a new repository for your custom builds:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'opkg_rst-host-133' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="opkg_rst-host-133" class="language-markup">sudo apt-get install apache2</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'opkg_rst-host-23' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="opkg_rst-host-23" class="language-markup">sudo apt-get install apache2</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -148,8 +148,8 @@ You can easily setup a new repository for your custom builds:
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'opkg_rst-host-134' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="opkg_rst-host-134" class="language-markup">sudo ln -s /home/architech/architech_sdk/architech/microzed/yocto/build/tmp/deploy/ipk/ /var/www/html/microzed-ipk</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'opkg_rst-host-24' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="opkg_rst-host-24" class="language-markup">sudo ln -s /home/architech/architech_sdk/architech/microzed/yocto/build/tmp/deploy/ipk/ /var/www/html/microzed-ipk</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -188,8 +188,8 @@ Sometimes, you need to force bitbake to rebuild the index of packages by means o
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'opkg_rst-host-135' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="opkg_rst-host-135" class="language-markup">bitbake package-index</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'opkg_rst-host-25' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="opkg_rst-host-25" class="language-markup">bitbake package-index</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>

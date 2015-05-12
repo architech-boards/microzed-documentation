@@ -29,9 +29,9 @@ To write your application you need:
 
 .. note::
 
- | Before to start remenber to copy the toolchain to sysroot
+ | Before to start remember to copy the cross-toolchain libreries to sysroot
  | 
- | cp -r /home/architech/architech_sdk/architech/microzed/toolchain/sysroots/cortexa8t2hf-vfp-neon-poky-linux-gnueabi/* /home/architech/architech_sdk/architech/microzed/sysroot
+ | cp -r /home/architech/architech_sdk/architech/microzed/toolchain/sysroots/armv7a-vfp-neon-poky-linux-gnueabi/* /home/architech/architech_sdk/architech/microzed/sysroot
 
 
 Creating the Project
@@ -102,8 +102,8 @@ Connect Microzed console to your PC and power-on the board. Once you built the p
 .. raw:: html
 
  <div>
- <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'eclipse_rst-board-251' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="eclipse_rst-board-251" class="language-markup">microzed login: root
+ <div><b class="admonition-board">&nbsp;&nbsp;Board&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'eclipse_rst-board-241' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="eclipse_rst-board-241" class="language-markup">microzed login: root
  /etc/init.d/tcf-agent restart</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
@@ -154,8 +154,8 @@ On the Host machine, follow these steps to let **Eclipse** deploy and debug your
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'eclipse_rst-host-161' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="eclipse_rst-host-161" class="language-markup">/home/architech/architech_sdk/architech/microzed/toolchain/sysroots/i686-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gdb</code></pre>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'eclipse_rst-host-121' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="eclipse_rst-host-121" class="language-markup">/home/architech/architech_sdk/architech/microzed/toolchain/sysroots/i686-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gdb</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
@@ -166,8 +166,8 @@ On the Host machine, follow these steps to let **Eclipse** deploy and debug your
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'eclipse_rst-host-162' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="eclipse_rst-host-162" class="language-markup">/home/architech/architech_sdk/architech/microzed/sysroot/lib
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'eclipse_rst-host-122' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="eclipse_rst-host-122" class="language-markup">/home/architech/architech_sdk/architech/microzed/sysroot/lib
  /home/architech/architech_sdk/architech/microzed/sysroot/usr/lib</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
