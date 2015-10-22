@@ -41,14 +41,25 @@ Install just one board
 If you don't want to install the tools for all the boards, you can install just the subset
 of tools related to Microzed:
 
-1) Install repo tool, if you already have it go to step 4
+1) Install the following packages, it can require for a while:
 
 .. raw:: html
 
  <div>
  <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'install_scripts_rst-host-192' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="install_scripts_rst-host-192" class="language-markup">mkdir -p ~/bin
- sudo apt-get update
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="install_scripts_rst-host-192" class="language-markup">sudo apt-get update
+ sudo apt-get --yes --force-yes install gawk wget git-core diffstat unzip texinfo gcc-multilib build-essential chrpath socat libsdl1.2-dev xterm vim curl u-boot-tools libqtwebkit4 qt4-dev-tools texi2html subversion apache2 autoconf vim-common uuid-dev iasl default-jre libncurses5-dev &gt; /dev/null</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
+
+2) Install repo tool, if you already have it go to the next step
+
+.. raw:: html
+
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'install_scripts_rst-host-193' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="install_scripts_rst-host-193" class="language-markup">mkdir -p ~/bin
  sudo apt-get install curl
  curl http://commondatastorage.googleapis.com/git-repo-downloads/repo &gt; ~/bin/repo
  chmod a+x ~/bin/repo</code></pre>
@@ -56,35 +67,35 @@ of tools related to Microzed:
  <script src="_static/select_text.js"></script>
  </div>
 
-2) Make sure directory *~/bin* is included in your *PATH* variable by printing its content
-
-.. raw:: html
-
- <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'install_scripts_rst-host-193' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="install_scripts_rst-host-193" class="language-markup">echo $PATH</code></pre>
- <script src="_static/prism.js"></script>
- <script src="_static/select_text.js"></script>
- </div>
-
-3) If *~/bin* directory is not included, add this line to your *~/.bashrc*
+3) Make sure directory *~/bin* is included in your *PATH* variable by printing its content
 
 .. raw:: html
 
  <div>
  <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'install_scripts_rst-host-194' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="install_scripts_rst-host-194" class="language-markup">export PATH="$PATH:${HOME}/bin"</code></pre>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="install_scripts_rst-host-194" class="language-markup">echo $PATH</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
  </div>
 
-4) Install and setup git:
+4) If *~/bin* directory is not included, add this line to your *~/.bashrc*
 
 .. raw:: html
 
  <div>
  <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'install_scripts_rst-host-195' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="install_scripts_rst-host-195" class="language-markup">sudo apt-get install git-core
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="install_scripts_rst-host-195" class="language-markup">export PATH="$PATH:${HOME}/bin"</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
+
+5) Install and setup git:
+
+.. raw:: html
+
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'install_scripts_rst-host-196' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="install_scripts_rst-host-196" class="language-markup">sudo apt-get install git-core
  git config --global user.name "Architech User"
  git config --global user.email ""
  git config --global color.ui "auto"</code></pre>
@@ -92,13 +103,13 @@ of tools related to Microzed:
  <script src="_static/select_text.js"></script>
  </div>
 
-5) Finally install the board sdk:
+6) Finally install the board sdk:
 
 .. raw:: html
 
  <div>
- <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'install_scripts_rst-host-196' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="install_scripts_rst-host-196" class="language-markup">mkdir Microzed
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'install_scripts_rst-host-197' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="install_scripts_rst-host-197" class="language-markup">mkdir Microzed
  cd Microzed
  git clone -b dizzy https://github.com/architech-boards/microzed-splashscreen.git
  mv microzed-splashscreen splashscreen
@@ -108,4 +119,26 @@ of tools related to Microzed:
  <script src="_static/select_text.js"></script>
  </div>
 
-This script needs the same tools/packages required by *machine_install*
+before build an image with bitbake open the file */your/path/Microzed/yocto/build/conf/local.conf* and edit these variables:
+
+.. raw:: html
+
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'install_scripts_rst-host-198' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="install_scripts_rst-host-198" class="language-markup">DL_DIR = "/home/downloads"
+ SSTATE_DIR = "/home/sstate-cache"</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
+
+and change them in:
+
+.. raw:: html
+
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'install_scripts_rst-host-199' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="install_scripts_rst-host-199" class="language-markup">DL_DIR ?= "${TOPDIR}/downloads"
+ SSTATE_DIR ?= "${TOPDIR}/sstate-cache"</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
