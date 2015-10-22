@@ -41,12 +41,68 @@ Install just one board
 If you don't want to install the tools for all the boards, you can install just the subset
 of tools related to Microzed:
 
+1) Install repo tool, if you already have it go to step 4
+
 .. raw:: html
 
  <div>
  <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'install_scripts_rst-host-192' );">select</a></div>
- <pre class="line-numbers pre-replacer" data-start="1"><code id="install_scripts_rst-host-192" class="language-markup">git clone -b dizzy https://github.com/architech-boards/microzed-splashscreen.git
- cd microzed-splashscreen
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="install_scripts_rst-host-192" class="language-markup">mkdir -p ~/bin
+ sudo apt-get update
+ sudo apt-get install curl
+ curl http://commondatastorage.googleapis.com/git-repo-downloads/repo &gt; ~/bin/repo
+ chmod a+x ~/bin/repo</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
+
+2) Make sure directory *~/bin* is included in your *PATH* variable by printing its content
+
+.. raw:: html
+
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'install_scripts_rst-host-193' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="install_scripts_rst-host-193" class="language-markup">echo $PATH</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
+
+3) If *~/bin* directory is not included, add this line to your *~/.bashrc*
+
+.. raw:: html
+
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'install_scripts_rst-host-194' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="install_scripts_rst-host-194" class="language-markup">export PATH="$PATH:${HOME}/bin"</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
+
+4) Install and setup git:
+
+.. raw:: html
+
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'install_scripts_rst-host-195' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="install_scripts_rst-host-195" class="language-markup">sudo apt-get install git-core
+ git config --global user.name "Architech User"
+ git config --global user.email ""
+ git config --global color.ui "auto"</code></pre>
+ <script src="_static/prism.js"></script>
+ <script src="_static/select_text.js"></script>
+ </div>
+
+5) Finally install the board sdk:
+
+.. raw:: html
+
+ <div>
+ <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'install_scripts_rst-host-196' );">select</a></div>
+ <pre class="line-numbers pre-replacer" data-start="1"><code id="install_scripts_rst-host-196" class="language-markup">mkdir Microzed
+ cd Microzed
+ git clone -b dizzy https://github.com/architech-boards/microzed-splashscreen.git
+ mv microzed-splashscreen splashscreen
+ cd splashscreen
  ./run_install</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>

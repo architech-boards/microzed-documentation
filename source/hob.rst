@@ -16,3 +16,7 @@ once open, you are required to select the machine you want to compile against
     :align: center
 
 after that, you can select the image you want to build and, of course, you can customize it.
+
+.. note::
+
+ | Remove **tools-debug** from **local.conf** file in order to use correctly HOB.

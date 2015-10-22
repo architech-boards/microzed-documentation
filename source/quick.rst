@@ -35,7 +35,7 @@ The time to create a simple *HelloWorld!* application using **Eclipse** has come
 
  | Before to start remember to copy the cross-toolchain libreries to sysroot
  | 
- | cp -r /home/architech/architech_sdk/architech/microzed/toolchain/sysroots/armv7a-vfp-neon-poky-linux-gnueabi/* /home/architech/architech_sdk/architech/microzed/sysroot
+ | sudo cp -r /home/architech/architech_sdk/architech/microzed/toolchain/sysroots/armv7a-vfp-neon-poky-linux-gnueabi/* /home/architech/architech_sdk/architech/microzed/sysroot
 
 
 1. Return to the **Splashscreen**, which we left on Microzed board screen, and click on *Develop with Eclipse*.
