@@ -97,7 +97,7 @@ of tools related to Microzed:
  <div><b class="admonition-host">&nbsp;&nbsp;Host&nbsp;&nbsp;</b>&nbsp;&nbsp;<a style="float: right;" href="javascript:select_text( 'install_scripts_rst-host-196' );">select</a></div>
  <pre class="line-numbers pre-replacer" data-start="1"><code id="install_scripts_rst-host-196" class="language-markup">sudo apt-get install git-core
  git config --global user.name "Architech User"
- git config --global user.email ""
+ git config --global user.email "your@mail.org"
  git config --global color.ui "auto"</code></pre>
  <script src="_static/prism.js"></script>
  <script src="_static/select_text.js"></script>
