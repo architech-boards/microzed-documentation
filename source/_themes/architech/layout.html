@@ -15,7 +15,7 @@
 
 {%- block doctype -%}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 {%- endblock %}
 {%- set reldelim1 = reldelim1 is not defined and ' &raquo;' or reldelim1 %}
 {%- set reldelim2 = reldelim2 is not defined and ' |' or reldelim2 %}
@@ -33,11 +33,11 @@
 {%- macro script() %}
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT: '{{ url_root }}',
-        VERSION: '{{ release|e }}',
+        URL_ROOT:    '{{ url_root }}',
+        VERSION:     '{{ release|e }}',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '{{ '' if no_search_suffix else file_suffix }}',
-        HAS_SOURCE: {{ has_source|lower }}
+        HAS_SOURCE:  {{ has_source|lower }}
       };
     </script>
     {%- for scriptfile in script_files %}
@@ -106,7 +106,7 @@
       <div class="navbar-inner">
         <div class="container">
           <!--<a class="brand" href="#"><img src={{ pathto("_static/architechlogo.png",1) }} /></a>-->
-          <a class="brand" href="http://www.silica.com/architech">ArchiTech</a>
+          <a class="brand" href="http://www.silica.com">Avnet Silica</a>
           <ul class="nav pull-left">
             {%- for rellink in rellinks %}
               <li><a href="{{ pathto(rellink[0]) }}" title="{{ rellink[1]|striptags|e }}">{{ rellink[3] }}</a>
@@ -128,8 +128,8 @@
       <div class="span3">
         <div class="well affix" style="width:180px">
         <!--<div class="well sidebar-nav" data-spy="affix" daga-offset-rop="200">-->
-            <a href="http://www.silica.com/architech"><img style="padding-bottom: 20px" src={{ pathto("_static/architechlogo.png",1) }} /></a>
-            <h3><a href="{{ pathto(master_doc) }}">{{ _('Table Of Contents') }}</a></h3>
+            <a href="http://www.silica.com"><img style="padding-bottom: 20px" src={{ pathto("_static/architechlogo.png",1) }} /></a>
+            <h3><a href="{{ pathto(master_doc) }}">{{ _('Introduction and contents') }}</a></h3>
             {{ toctree() }}
         </div>
       </div>
