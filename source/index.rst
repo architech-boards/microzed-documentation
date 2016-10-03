@@ -3,7 +3,7 @@ Architech's Microzed documentation
 **********************************
 
 :Version: 2.0.1A
-:Copyright: Architech
+:Copyright: (C)2016 Avnet Silica company
 :Date: 22/10/15
 
 .. image:: _static/board.png
