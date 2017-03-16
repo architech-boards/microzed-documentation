@@ -105,8 +105,7 @@
     <div class="navbar navbar-fixed-top navbar-inverse">
       <div class="navbar-inner">
         <div class="container">
-          <!--<a class="brand" href="#"><img src={{ pathto("_static/architechlogo.png",1) }} /></a>-->
-          <a class="brand" href="http://www.silica.com">Avnet Silica</a>
+          <a class="brand" href="http://95.85.1.193/index.html">Avnet Silica</a>
           <ul class="nav pull-left">
             {%- for rellink in rellinks %}
               <li><a href="{{ pathto(rellink[0]) }}" title="{{ rellink[1]|striptags|e }}">{{ rellink[3] }}</a>
@@ -127,8 +126,7 @@
     <div class="row">
       <div class="span3">
         <div class="well affix" style="width:180px">
-        <!--<div class="well sidebar-nav" data-spy="affix" daga-offset-rop="200">-->
-            <a href="http://www.silica.com"><img style="padding-bottom: 20px" src={{ pathto("_static/architechlogo.png",1) }} /></a>
+            <a href="http://95.85.1.193/index.html"><img style="padding-bottom: 20px" src={{ pathto("http://95.85.1.193/logo_silica.png",1) }} /></a>
             <h3><a href="{{ pathto(master_doc) }}">{{ _('Introduction and contents') }}</a></h3>
             {{ toctree() }}
         </div>
